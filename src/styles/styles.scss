@@ -548,7 +548,7 @@ section {
         z-index: 1; //wecwec
 
         &:hover {
-          background-color: var(--color-secondary);
+          background-color: var(--color-grey-5);
           i {
             color: var(--color-primary);
             transform: rotateY(360deg); //qwdqwd
@@ -562,13 +562,13 @@ section {
           align-items: center;
           justify-content: center;
           font-size: 1.3rem;
-          transition: 1s; //later chnage to 0.5s
+          transition: 0.5s; //later chnage to 0.5s
         }
       }
     }
   }
 
-  .contact-icon a:before {
+  .contact-icon a:before { 
     //sdcsdcsc
     content: "";
     position: absolute;
@@ -577,7 +577,8 @@ section {
     width: 100%;
     height: 100%;
     background: var(--color-secondary);
-    transition: 1s; //later change to 0.5s
+    // background: var(--color-grey-5);
+    transition: 0.5s; //later change to 0.5s
     z-index: 2;
   }
   .contact-icon a:hover:before {
@@ -598,7 +599,8 @@ section {
   }
 
   .contact-icon a:nth-child(4):before {
-    background: #f56040;
+    // background: #f56040;
+    background: #d6ee00;
   }
 
   .right-contact {
@@ -854,7 +856,6 @@ section {
   transition: var(--trans);
 }
 
-
 .portfolio-item .hover-items .icons .icon i {
   font-size: 1.5rem;
   color: var(--color-white);
@@ -878,7 +879,8 @@ section {
 }
 .portfolio-item:hover .image {
   //cwscewecw
-  transform: scale(1.2);
+  opacity: 0.1;
+  transform: scale(1.1);
   transition: var(--trans);
 }
 
