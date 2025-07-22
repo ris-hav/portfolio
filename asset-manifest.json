@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8875f1bf.css",
-    "main.js": "/portfolio/static/js/main.564548fc.js",
-    "static/media/port7.png": "/portfolio/static/media/port7.f0f0ce1f4a2dadde8614.png",
-    "static/media/test1.png": "/portfolio/static/media/test1.6fd955c2f0534ffe4621.png",
-    "static/media/port3.png": "/portfolio/static/media/port3.44957653f6d4576b16b8.png",
-    "static/media/port2.png": "/portfolio/static/media/port2.2f0614ff3dee4e2d1e98.png",
-    "static/media/port6.png": "/portfolio/static/media/port6.47f20c837c5fd8f68f89.png",
-    "static/media/port1.png": "/portfolio/static/media/port1.7503e98bfa810fb7c7a0.png",
-    "static/media/port5.png": "/portfolio/static/media/port5.0cb2d9f00f591db88d13.png",
-    "static/media/port8.png": "/portfolio/static/media/port8.6447e255ba95548808d0.png",
-    "static/media/port4.png": "/portfolio/static/media/port4.59de73af9b668fc8d55f.png",
-    "static/media/cv.pdf": "/portfolio/static/media/cv.f581351b0450a994c4f0.pdf",
+    "main.css": "/portfolio/static/css/main.62755e01.css",
+    "main.js": "/portfolio/static/js/main.7acf8d93.js",
+    "static/media/port9.webp": "/portfolio/static/media/port9.5880bce45b0911fe2858.webp",
+    "static/media/port7.webp": "/portfolio/static/media/port7.c2ca78848864d9de4fd2.webp",
+    "static/media/port2.webp": "/portfolio/static/media/port2.1d18e472cc960e445a7d.webp",
+    "static/media/port10.webp": "/portfolio/static/media/port10.eeacef6ee13e701ca14a.webp",
+    "static/media/profile.webp": "/portfolio/static/media/profile.967ef593b2edf53dc8d0.webp",
+    "static/media/port1.webp": "/portfolio/static/media/port1.edd871dc3d47f7738918.webp",
+    "static/media/Rishav_Saha_Frontend_Developer_CV.pdf": "/portfolio/static/media/Rishav_Saha_Frontend_Developer_CV.993f20a76cf3fc8b174d.pdf",
+    "static/media/port6.webp": "/portfolio/static/media/port6.6621a4b11f2e47d897a2.webp",
+    "static/media/port5.webp": "/portfolio/static/media/port5.6ed33dad9420c0f55c27.webp",
+    "static/media/port8.webp": "/portfolio/static/media/port8.585de2a45d392003a8dd.webp",
     "index.html": "/portfolio/index.html",
-    "main.8875f1bf.css.map": "/portfolio/static/css/main.8875f1bf.css.map",
-    "main.564548fc.js.map": "/portfolio/static/js/main.564548fc.js.map"
+    "main.62755e01.css.map": "/portfolio/static/css/main.62755e01.css.map",
+    "main.7acf8d93.js.map": "/portfolio/static/js/main.7acf8d93.js.map"
   },
   "entrypoints": [
-    "static/css/main.8875f1bf.css",
-    "static/js/main.564548fc.js"
+    "static/css/main.62755e01.css",
+    "static/js/main.7acf8d93.js"
   ]
 }
