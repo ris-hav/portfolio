@@ -1,34 +1,38 @@
 import React from "react";
+import controlData from "../data/controlData";
 
-export default function Control() {
+function Control({ activeIndex, setActiveIndex, setIsLight }) {
+  // console.log("control called");
+
+  function handleControl(index) {
+    setActiveIndex(index);
+  }
+
+  function handleTheme() {
+    setIsLight((prevTheme) => !prevTheme);
+  }
+
   return (
     <>
-      <div class="controls">
-        <div class="control control-1 active-btn" data-id="home">
-          <i class="fa-solid fa-house"></i>{" "}
-          <span class="tooltiptext">Home</span>
-        </div>
-        <div class="control control-2" data-id="about">
-          <i class="fa-solid fa-user"></i>
-          <span class="tooltiptext">About</span>
-        </div>
-        <div class="control control-3" data-id="portfolio">
-          <i class="fa-solid fa-briefcase"></i>
-          <span class="tooltiptext">Portfolio</span>
-        </div>
-        {/* <div class="control control-4" data-id="blogs">
-        <i class="fa-solid fa-newspaper"></i
-        ><span class="tooltiptext">Blog</span>
-      </div>  */}
-        <div class="control control-5" data-id="contact">
-          <i class="fa-solid fa-envelope-open"></i>
-          <span class="tooltiptext">Contact</span>
-        </div>
+      <div className="controls">
+        {controlData.map(({ text, icon }, controlIndex) => (
+          <div
+            onClick={() => handleControl(controlIndex)}
+            key={controlIndex}
+            className={`control control-${controlIndex + 1} ${
+              controlIndex === activeIndex ? "active-btn" : ""
+            }`}
+            data-id={text.toLowerCase()}
+          >
+            <i className={icon}></i> <span className="tooltiptext">{text}</span>
+          </div>
+        ))}
       </div>
-      <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-        {/* <span class="texttiptheme">Theme</span> */}
+      <div className={`theme-btn `} onClick={handleTheme}>
+        <i className="fas fa-adjust"></i>
       </div>
     </>
   );
 }
+
+export default React.memo(Control);

@@ -1,18 +1,19 @@
-import React from "react";
-
+// import React from "react";
+import contactData from "../data/contactData";
+import socialMediaData from "../data/socialMediaData";
 export default function Contact() {
   return (
     <>
-      <section class="section sec5 contact" id="contact">
-        <div class="contact-container">
-          <div class="main-title">
+      <section className="section sec5 contact active" id="contact">
+        <div className="contact-container">
+          <div className="main-title">
             <h2>
               Contact <span>me</span>
-              <span class="bg-text">Approach</span>
+              {/* <span className="bg-text">Approach</span> */}
             </h2>
           </div>
-          <div class="contact-content-con">
-            <div class="left-contact">
+          <div className="contact-content-con">
+            <div className="left-contact">
               <h4>Contact me here</h4>
               <p>
                 I'm seeking out opportunities to collaborate with
@@ -21,65 +22,40 @@ export default function Contact() {
                 solve real business-problems. Let's connect and see how we can
                 work together to achieve our goals!
               </p>
-              <div class="contact-info">
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-map-marker-alt"></i>Location
+              <div className="contact-info">
+                {contactData.map(({ icon, title, value }, contactIndex) => (
+                  <div key={contactIndex} className="contact-item">
+                    <div className="icon">
+                      <i className={icon}></i>
+                      {title}
+                    </div>
+                    <p>{`: ${value}`}</p>
                   </div>
-                  <p>: Bengaluru, India</p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-envelope"></i>Email
-                  </div>
-                  <p>: saharishav53@gmail.com</p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-user-graduate"></i>Education
-                  </div>
-                  <p>: VIT,Vellore</p>
-                </div>
-
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-globe-africa"></i>Languages
-                  </div>
-                  <p>: Hindi, English, Bengali</p>
-                </div>
+                ))}
               </div>
-              <div class="contact-icons">
-                <div class="contact-icon">
-                  <a
-                    title="twitter"
-                    href="https://twitter.com/saharishav53"
-                    target="_blank"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/in/rssh/" target="_blank">
-                  <i class="fab fa-linkedin-in icon"></i>
-                  </a>
-                  <a href="https://github.com/ris-hav" target="_blank">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/ris.hav__/"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  
+              <div className="contact-icons">
+                <div className="contact-icon">
+                  {socialMediaData.map(({ title, icon, link }, socialIndex) => (
+                    <a
+                      key={socialIndex}
+                      title={title}
+                      href={link}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <i className={icon} />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
-            <div class="right-contact">
+            <div className="right-contact">
               <form
                 action="https://formsubmit.co/48a1e0c3a1922a7a7675febec7ace312"
                 method="POST"
-                class="contact-form"
+                className="contact-form"
               >
-                <div class="input-control i-c-2">
+                <div className="input-control i-c-2">
                   <input
                     type="text"
                     name="name"
@@ -93,7 +69,7 @@ export default function Contact() {
                     placeholder="YOUR EMAIL"
                   />
                 </div>
-                <div class="input-control">
+                <div className="input-control">
                   <input
                     type="text"
                     name="subject"
@@ -105,9 +81,8 @@ export default function Contact() {
                     name="_next"
                     value="https://ris-hav.github.io/thankyou/"
                   />
-                  {/* <!-- <input type="hidden" name="_captcha" value="false" /> --> */}
                 </div>
-                <div class="input-control">
+                <div className="input-control">
                   <textarea
                     name="message"
                     id=""
@@ -116,11 +91,11 @@ export default function Contact() {
                     placeholder="Message here...."
                   ></textarea>
                 </div>
-                <div class="btn-con">
-                  <button type="submit" class="main-btn">
-                    <span class="btn-text">Submit</span>
-                    <span class="btn-icon">
-                      <i class="fa-solid fa-paper-plane"></i>
+                <div className="btn-con">
+                  <button type="submit" className="main-btn">
+                    <span className="btn-text">Submit</span>
+                    <span className="btn-icon">
+                      <i className="fa-solid fa-paper-plane"></i>
                     </span>
                   </button>
                 </div>
