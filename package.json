@@ -13,7 +13,7 @@
     "start": "vite",
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --dotfiles",
     "build": "vite build",
     "preview": "vite preview"
   },
