@@ -34,10 +34,10 @@ function Control({ activeIndex, setActiveIndex, isLight, setIsLight }) {
 
   return (
     <>
-      <nav className="fixed inset-x-0 bottom-0 z-10 md:inset-x-auto md:bottom-auto md:left-1/2 md:top-6 md:-translate-x-1/2">
+      <nav className="fixed inset-x-3 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-10 md:inset-x-auto md:bottom-auto md:left-1/2 md:top-6 md:-translate-x-1/2">
         <div
           ref={trackRef}
-          className="relative flex items-center border-t border-[var(--nav-glass-border)] bg-[var(--nav-glass-bg)] px-1 pb-[calc(0.5rem+env(safe-area-inset-bottom))] pt-2 backdrop-blur-[20px] backdrop-saturate-[180%] transition-colors duration-300 md:gap-1 md:rounded-full md:border md:p-1.5 md:pb-1.5 md:shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+          className="relative flex items-center gap-1 rounded-[28px] border border-[var(--nav-glass-border)] bg-[var(--nav-glass-bg)] px-1 py-2 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-[20px] backdrop-saturate-[180%] transition-colors duration-300 md:w-auto md:rounded-full md:p-1.5"
         >
           <div
             className="absolute left-0 top-1.5 z-0 hidden h-[calc(100%-12px)] rounded-full bg-secondary transition-[transform,width] duration-500 ease-[cubic-bezier(0.34,1.25,0.64,1)] md:block"
@@ -69,7 +69,7 @@ function Control({ activeIndex, setActiveIndex, isLight, setIsLight }) {
         onClick={handleTheme}
         aria-label="Toggle light/dark theme"
         aria-pressed={isLight}
-        className={`fixed right-[2.6%] top-[5%] z-10 h-8 w-14 rounded-full p-1 shadow-[0_3px_15px_rgba(0,0,0,0.3)] transition-colors duration-300 ${
+        className={`fixed right-[2.6%] top-[5%] z-10 hidden h-8 w-14 rounded-full p-1 shadow-[0_3px_15px_rgba(0,0,0,0.3)] transition-colors duration-300 md:block ${
           isLight ? "bg-secondary" : "bg-grey-4"
         }`}
       >

@@ -21,7 +21,7 @@ export default function Header() {
           </div>
         </div>
         <div className="order-1 mx-auto w-[90%] md:order-2 md:mx-0 md:w-auto md:pr-12">
-          <p className="m-0 text-sm font-semibold uppercase tracking-[3px] text-secondary">
+          <p className="m-0 max-w-[calc(100%-64px)] text-sm font-semibold uppercase tracking-[3px] text-secondary md:max-w-none">
             Senior Frontend Developer
           </p>
           <h1 className="mt-3 text-3xl font-semibold leading-[1.1] tracking-[-0.02em] sm:text-4xl md:text-[3.4rem]">

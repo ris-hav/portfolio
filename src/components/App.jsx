@@ -6,7 +6,9 @@ import Contact from "./Contact";
 import Control from "./Control";
 
 export default function App() {
-  const [isLight, setIsLight] = useState(false);
+  const [isLight, setIsLight] = useState(
+    () => window.matchMedia("(prefers-color-scheme: light)").matches
+  );
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
     if (isLight) document.body.classList.toggle("light-mode");

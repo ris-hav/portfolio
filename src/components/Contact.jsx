@@ -21,17 +21,14 @@ export default function Contact() {
               actually get to make the architectural calls. If that's what
               you're hiring for, email me directly or use the form below.
             </p>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {contactData.map(({ icon, title, value }, contactIndex) => (
-                <div
-                  key={contactIndex}
-                  className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between"
-                >
-                  <div className="grid grid-cols-[40px_1fr] items-center">
-                    <i className={`${icon} flex items-center text-xl`}></i>
-                    {title}
-                  </div>
-                  <p className="my-[0.3rem]">{`: ${value}`}</p>
+                <div key={contactIndex} className="flex items-center gap-3">
+                  <i className={`${icon} w-5 text-center text-lg text-grey-2`}></i>
+                  <p>
+                    <span>{title}</span>
+                    <span className="text-grey-2">{`: ${value}`}</span>
+                  </p>
                 </div>
               ))}
             </div>
