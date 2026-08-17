@@ -40,7 +40,7 @@ function Control({ activeIndex, setActiveIndex, isLight, setIsLight }) {
           className="relative flex items-center gap-1 rounded-[28px] border border-[var(--nav-glass-border)] bg-[var(--nav-glass-bg)] px-1 py-2 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-[20px] backdrop-saturate-[180%] transition-colors duration-300 md:w-auto md:rounded-full md:p-1.5"
         >
           <div
-            className="absolute left-0 top-1.5 z-0 hidden h-[calc(100%-12px)] rounded-full bg-secondary transition-[transform,width] duration-500 ease-[cubic-bezier(0.34,1.25,0.64,1)] md:block"
+            className="absolute left-0 inset-y-1 z-0 rounded-full bg-secondary transition-[transform,width] duration-500 ease-[cubic-bezier(0.34,1.25,0.64,1)] md:inset-y-1.5"
             style={{
               transform: `translateX(${indicator.left}px)`,
               width: indicator.width,
@@ -54,7 +54,7 @@ function Control({ activeIndex, setActiveIndex, isLight, setIsLight }) {
               key={controlIndex}
               className={`relative z-10 flex flex-1 flex-col items-center gap-1 rounded-full py-1 text-[0.7rem] font-medium transition-colors duration-300 md:flex-none md:flex-row md:gap-2 md:px-[1.3rem] md:py-2.5 md:text-[0.95rem] ${
                 controlIndex === activeIndex
-                  ? "text-secondary md:text-ink"
+                  ? "text-ink"
                   : "text-grey-2 hover:text-secondary md:hover:text-ink"
               }`}
             >
