@@ -16,6 +16,13 @@ export default function App() {
   }, [isLight]);
 
   useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: light)");
+    const handleChange = (event) => setIsLight(event.matches);
+    media.addEventListener("change", handleChange);
+    return () => media.removeEventListener("change", handleChange);
+  }, []);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, [activeIndex]);
 
