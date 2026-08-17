@@ -3,10 +3,6 @@
   //     height: 200vh;
   //     min-height: 100vh;
   //   }
-  .control:hover .tooltiptext {
-    visibility: hidden;
-  }
-
   .about-container {
     grid-template-columns: 1fr;
     .right-about {
@@ -25,9 +21,17 @@
     padding-bottom: 6rem;
   }
   .about-stats {
-    .progress-bars {
+    .skill-groups {
       grid-template-columns: 1fr;
     }
+  }
+
+  .case-study {
+    padding: 1.5rem !important;
+  }
+  .case-study-footer {
+    flex-direction: column;
+    align-items: flex-start !important;
   }
 
   .portfolios {
@@ -59,11 +63,6 @@
     }
   }
 
-  .blogss {
-    grid-template-columns: 1fr !important;
-    padding-bottom: 6rem;
-  }
-
   .right-contact .btn-con {
     margin-bottom: 2rem !important;
   }
@@ -72,7 +71,7 @@
   }
 
   .section {
-    padding: 2rem 2.5rem !important;
+    padding: 6rem 2.5rem 2rem !important;
   }
 
   .main-title {
@@ -84,18 +83,17 @@
     }
   }
 
-  .controls {
-    top: auto;
-    bottom: 0;
-    flex-direction: row;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    background-color: var(--color-grey-5);
-    .control {
-      margin: 1rem 0.3rem;
-    }
+  .pill-nav {
+    top: 16px;
+  }
+  .pill-track {
+    gap: 0;
+  }
+  .pill-item {
+    padding: 0.6rem 0.8rem;
+  }
+  .pill-label {
+    display: none;
   }
 }
 
@@ -124,9 +122,6 @@
     }
   }
   .portfolios {
-    grid-template-columns: 1fr 1fr;
-  }
-  .blogss {
     grid-template-columns: 1fr 1fr;
   }
   .main-title {

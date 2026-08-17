@@ -25,10 +25,11 @@ export default function About() {
               turning complex, hand-rolled UI into scalable, declarative
               systems.
               <br />
-              <br />I believe that collaboration and communication are key to
-              delivering successful projects, and I work closely with clients
-              and stakeholders to ensure that their vision is realized in the
-              final product.
+              <br />
+              Beyond writing code, I care about what the team can build on
+              after I'm done&mdash;documenting migrations in markdown guides,
+              running internal sessions on patterns I've shipped, and leaving
+              systems easier to extend than I found them.
             </p>
           </div>
           <div className="right-about">
@@ -44,13 +45,10 @@ export default function About() {
         </div>
         <div className="about-stats">
           <h4 className="stat-title">My Skills</h4>
-          <div className="progress-bars">
-            {skilldata.map((skill, skillIndex) => {
-              const { name, knowledge } = skill;
-              return (
-                <Skill key={skillIndex} name={name} knowledge={knowledge} />
-              );
-            })}
+          <div className="skill-groups">
+            {skilldata.map(({ category, skills }) => (
+              <Skill key={category} category={category} skills={skills} />
+            ))}
           </div>
         </div>
         <h4 className="stat-title">My Timeline</h4>

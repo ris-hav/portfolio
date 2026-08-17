@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import projects from "../data/projects";
+import caseStudies from "../data/caseStudies";
 import ImageSlider from "./ImageSlider";
+import CaseStudy from "./CaseStudy";
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
@@ -57,14 +59,19 @@ export default function Portfolio() {
       <section className="section sec3 portfolio active" id="portfolio">
         <div className="main-title">
           <h2>
-            My <span>portfolio</span>
-            {/* <span className="bg-text">my work</span> */}
+            Selected <span>work</span>
           </h2>
         </div>
         <p className="port-text">
-          Here is some of my work that showcases my skills in front-end
-          technologies
+          A few of the systems I've built and the impact they had.
         </p>
+        <div className="case-studies">
+          {caseStudies.map((caseStudy) => (
+            <CaseStudy key={caseStudy.title} {...caseStudy} />
+          ))}
+        </div>
+
+        <h4 className="stat-title">Side Projects</h4>
         {isMobile ? (
           <div className="portfolios">
             {projects.map(({ src, file, name, demoUrl, repoUrl }, projectIndex) => {
@@ -88,13 +95,15 @@ export default function Portfolio() {
             onWheel={handleWheel}
           >
             <div ref={imageTrackRef} id="image-track">
-              {projects.map(({ src, file, name }, projectIndex) => {
+              {projects.map(({ src, file, name, demoUrl, repoUrl }, projectIndex) => {
                 return (
                   <ImageSlider
                     key={projectIndex}
                     src={src}
                     name={name}
                     file={file}
+                    demoUrl={demoUrl}
+                    repoUrl={repoUrl}
                   />
                 );
               })}

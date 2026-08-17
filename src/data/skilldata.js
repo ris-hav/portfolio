@@ -1,35 +1,27 @@
 const skilldata = [
   {
-    name: "JAVASCRIPT",
-    knowledge: "90%",
+    category: "Languages",
+    skills: ["JavaScript", "TypeScript"],
   },
   {
-    name: "REACTJS",
-    knowledge: "90%",
+    category: "Frontend",
+    skills: [
+      "React.js",
+      "Angular",
+      "Redux",
+      "RxJS",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+    ],
   },
   {
-    name: "ANGULAR",
-    knowledge: "85%",
+    category: "Backend",
+    skills: ["Node.js", "NestJS", "PostgreSQL", "Prisma", "REST APIs"],
   },
   {
-    name: "TYPESCRIPT",
-    knowledge: "85%",
-  },
-  {
-    name: "REDUX",
-    knowledge: "80%",
-  },
-  {
-    name: "TAILWIND CSS",
-    knowledge: "80%",
-  },
-  {
-    name: "GIT",
-    knowledge: "80%",
-  },
-  {
-    name: "NODE.JS / NESTJS",
-    knowledge: "65%",
+    category: "Tools",
+    skills: ["Git", "Jest", "Docker"],
   },
 ];
 
