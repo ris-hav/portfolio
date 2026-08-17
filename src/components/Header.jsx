@@ -7,9 +7,9 @@ export default function Header() {
   return (
     <header
       id="home"
-      className="min-h-screen w-full overflow-hidden bg-primary text-ink transition-colors duration-300 animate-fadeUp"
+      className="w-full overflow-hidden bg-primary text-ink transition-colors duration-300 animate-fadeUp md:min-h-screen"
     >
-      <div className="mx-auto grid min-h-screen max-w-[1400px] grid-cols-1 items-center gap-10 px-6 pb-24 pt-10 md:grid-cols-2 md:px-16 md:pb-0 md:pt-0">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 px-6 pb-28 pt-10 md:min-h-screen md:grid-cols-2 md:items-center md:gap-10 md:px-16 md:pb-0 md:pt-0">
         <div className="relative order-2 flex items-center justify-center md:order-1">
           <div className="absolute left-[10%] top-[20%] h-3/5 w-3/5 -z-10 rounded-full bg-[radial-gradient(circle,var(--color-secondary)_0%,transparent_70%)] opacity-[0.35] blur-[70px]" />
           <div className="aspect-[3/4] w-[90%] max-w-[420px] overflow-hidden rounded-[18px] bg-black md:ml-16 md:w-[68%] md:max-w-none">

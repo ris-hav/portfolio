@@ -9,7 +9,7 @@ export default function About() {
       id="about"
       className="min-h-screen w-full bg-primary text-ink transition-colors duration-300 animate-fadeUp"
     >
-      <div className="mx-auto max-w-[1400px] px-6 pb-24 pt-10 md:pb-16 md:pt-28 md:px-16">
+      <div className="mx-auto max-w-[1400px] px-6 pb-28 pt-10 md:pb-16 md:pt-28 md:px-16">
         <div className="text-center">
           <h2 className="relative z-10 text-3xl font-semibold tracking-[-0.02em] md:text-[3.2rem]">
             About <span className="text-secondary">me</span>
