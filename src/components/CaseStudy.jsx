@@ -12,7 +12,7 @@ export default function CaseStudy({
   demoUrl,
 }) {
   return (
-    <article className="rounded-[22px] bg-grey-4 p-10 transition hover:-translate-y-0.5">
+    <article className="rounded-[22px] bg-grey-4 p-6 transition hover:-translate-y-0.5 sm:p-10">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 text-[0.85rem] uppercase tracking-wide text-secondary">
         <span>{company}</span>
         <span className="shrink-0">{period}</span>

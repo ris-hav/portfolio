@@ -34,7 +34,7 @@ function Control({ activeIndex, setActiveIndex, isLight, setIsLight }) {
 
   return (
     <>
-      <nav className="fixed left-1/2 top-4 z-10 -translate-x-1/2 md:top-6">
+      <nav className="fixed bottom-4 left-1/2 top-auto z-10 -translate-x-1/2 md:bottom-auto md:top-6">
         <div
           ref={trackRef}
           className="relative flex items-center gap-1 rounded-full border border-[var(--nav-glass-border)] bg-[var(--nav-glass-bg)] p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-[20px] backdrop-saturate-[180%] transition-colors duration-300"
