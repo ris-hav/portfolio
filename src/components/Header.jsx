@@ -24,7 +24,7 @@ export default function Header() {
           <p className="m-0 max-w-[calc(100%-64px)] text-sm font-semibold uppercase tracking-[3px] text-secondary md:max-w-none">
             Senior Frontend Developer
           </p>
-          <h1 className="mt-4 text-3xl font-semibold leading-[1.35] tracking-normal sm:text-4xl md:text-[3.4rem] md:leading-[1.2] md:tracking-[-0.01em]">
+          <h1 className="mt-4 text-3xl font-semibold leading-[1.35] tracking-normal sm:text-4xl md:text-[2.75rem] md:leading-[1.25] md:tracking-[-0.01em]">
             Hi, I'm <span className="text-secondary">Rishav</span>. I build
             React &amp; Angular applications that scale.
           </h1>
