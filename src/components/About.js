@@ -18,10 +18,12 @@ export default function About() {
           <div className="left-about">
             <h4>Information about me</h4>
             <p>
-              Stepped into the corporate world as a Software Engineer. I have a
-              strong foundation in JavaScript and React as well as experience
-              working with modern frontend libraries such as Tailwind CSS,
-              Material UI and React Query.
+              Frontend Developer with 5+ years building performant React and
+              Angular applications for B2B SaaS products, including full
+              mobile app delivery in React Native. I'm currently expanding
+              into backend development with Node.js/NestJS, and I'm known for
+              turning complex, hand-rolled UI into scalable, declarative
+              systems.
               <br />
               <br />I believe that collaboration and communication are key to
               delivering successful projects, and I work closely with clients

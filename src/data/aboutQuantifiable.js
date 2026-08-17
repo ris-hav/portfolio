@@ -1,2 +1,2 @@
-const aboutQuantifiable = [{ quantity: "20+", title: "React Projects" }, { quantity: "3.5", title: "Years of Experience" }, { quantity: "80+", title: "Coded iOS siri shortcuts" }, { quantity: "3", title: "Happy Clients" }];
+const aboutQuantifiable = [{ quantity: "5+", title: "Years of Experience" }, { quantity: "3", title: "Companies" }, { quantity: "50%", title: "Faster Page Loads Delivered" }, { quantity: "1M+", title: "Invoices Processed" }];
 export default aboutQuantifiable;

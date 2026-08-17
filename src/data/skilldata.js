@@ -1,36 +1,35 @@
 const skilldata = [
   {
     name: "JAVASCRIPT",
-    knowledge: "85%",
+    knowledge: "90%",
   },
   {
     name: "REACTJS",
-    knowledge: "85%",
+    knowledge: "90%",
   },
   {
-    name: "TAILWIND CSS",
+    name: "ANGULAR",
     knowledge: "85%",
   },
   {
     name: "TYPESCRIPT",
+    knowledge: "85%",
+  },
+  {
+    name: "REDUX",
     knowledge: "80%",
   },
   {
-    name: "HTML5",
+    name: "TAILWIND CSS",
     knowledge: "80%",
   },
   {
     name: "GIT",
-    knowledge: "75%",
+    knowledge: "80%",
   },
   {
-    name: "MATERIAL UI",
-    knowledge: "70%",
-  },
-
-  {
-    name: "MYSQL",
-    knowledge: "70%",
+    name: "NODE.JS / NESTJS",
+    knowledge: "65%",
   },
 ];
 

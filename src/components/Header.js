@@ -1,10 +1,8 @@
 import React from "react";
 import "../styles/styles.css";
 import profileImage from "../asset/img/profile.webp";
-// import profileImage from '../img/original.png';
-import cv from "../asset/Rishav_Saha_Frontend_Developer_CV.pdf";
+import cv from "../asset/Rishav_Saha_Frontend_Developer.pdf";
 import { FaDownload } from "react-icons/fa";
-// import FaDownload from 'react-icons/fa/FaDownload';
 
 export default function Header() {
   return (
@@ -18,16 +16,14 @@ export default function Header() {
         </div>
         <div className="right-header">
           <h1 className="name">
-            Hi, I'm <span>Rishav</span>. A Front-end Developer.
+            Hi, I'm <span>Rishav</span>. A React.js & Angular Specialist.
           </h1>
           <p>
-            Frontend Developer with serious problem-solving capabilities and
-            team collaboration experience in delivering efficient solutions.
-            Specializes in writing clean, optimized code with focus on
-            performance and maintainability.. Driven and creative individual
-            with a passion for innovation and problem-solving. Outside of work,
-            I enjoy exploring new technologies and engaging with the tech
-            community.
+            Frontend Developer with 5+ years building performant React and
+            Angular applications for B2B SaaS products, including full
+            mobile app delivery in React Native. Currently expanding into
+            backend development with Node.js/NestJS. Known for turning
+            complex, hand-rolled UI into scalable, declarative systems.
           </p>
           <div className="btn-con">
             <a

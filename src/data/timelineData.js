@@ -1,29 +1,38 @@
 const timelineData = [
     {
         id: 1,
-        role: "Software Development Engineer 2",
-        company: "appnox technologies",
-        duration: "Jul 2024 - Jun 2025",
+        role: "Senior Frontend Developer",
+        company: "OnlyGood",
+        duration: "Aug 2025 - Present",
         responsibilities:
-            "Developed entire Menu Management system for travel-based B2B software used in Italian market, handling complex business requirements and user workflows.Collaborated with cross-functional teams including UI/UX designers and backend developers to deliver client-focused solutions and integrated APIs using Axios."
+            "Rebuilt Angular forms with Reactive Forms and FormBuilder, cutting boilerplate by 95% and documenting the migration for the team. Redesigned cross-module state management with a shared-service pattern, cutting integration effort by 60%. Built the OnlyGood mobile app from scratch in React Native with role-based auth, and shipped ECharts-powered dashboards with locale-aware PDF/CSV export."
 
     },
     {
         id: 2,
-        role: "Programmer Analyst",
-        company: "cognizant technology solutions",
-        duration: "Jul 2020 - Dec 2022",
+        role: "Software Development Engineer 2",
+        company: "Appnox Technologies",
+        duration: "Jul 2024 - Jun 2025",
         responsibilities:
-            "Built e-commerce product catalog components using React and Redux with advanced filtering, search functionality, and responsive layouts supporting 50,000+ SKUs.Implemented automated testing solutions using Selenium WebDriver with Java for comprehensive e-commerce platform validation and quality assurance."
+            "Built the entire Menu Management system for a B2B travel platform serving the Italian market. Led the frontend team to consistently hit sprint targets and delivery deadlines. Cut page load times by 50% through React Query, lazy loading, memoization, and virtualization."
 
     },
     {
         id: 3,
-        role: "Intern",
-        company: "Tata Motors",
-        duration: "Apr 2018 - Jun 2018",
+        role: "Career Break",
+        company: "Upskilling & Personal Health",
+        duration: "Jan 2023 - Jun 2024",
         responsibilities:
-            "Developed Python-based data visualization system to transform CSV data into monthly electrical energy performance graphs for multi-year analysis.Collaborated with security team to conduct comprehensive energy audit of Tata Motors Hospital facility using layout analysis and data collection methods."
+            "Upskilled in React, state management, and performance optimization while addressing a personal health matter."
+
+    },
+    {
+        id: 4,
+        role: "Programmer Analyst",
+        company: "Cognizant Technology Solutions",
+        duration: "Jul 2020 - Dec 2022",
+        responsibilities:
+            "Built e-commerce product catalog components in React and Redux with advanced filtering and search, supporting 50,000+ SKUs. Built automated test suites with Selenium WebDriver and Java, and SAP ABAP applications resolving purchase order discrepancies across 1M+ invoices."
 
     }
 ];
