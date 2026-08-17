@@ -3,6 +3,7 @@ import port2 from "../asset/img/port2.webp";
 import port6 from "../asset/img/port6.webp";
 import port7 from "../asset/img/port7.webp";
 import port10 from "../asset/img/port10.webp";
+import port11 from "../asset/img/port11.png";
 
 const projects = [
   {
@@ -19,6 +20,13 @@ const projects = [
     src: port1,
     name: "Tints & Shades",
     file: "gcolor",
+  },
+  {
+    src: port11,
+    name: "AccessSuite",
+    file: "accesssuite",
+    demoUrl: "https://accesssuite.vercel.app/",
+    repoUrl: "https://accesssuite.vercel.app/",
   },
   {
     src: port10,

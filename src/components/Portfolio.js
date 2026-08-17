@@ -67,13 +67,15 @@ export default function Portfolio() {
         </p>
         {isMobile ? (
           <div className="portfolios">
-            {projects.map(({ src, file, name }, projectIndex) => {
+            {projects.map(({ src, file, name, demoUrl, repoUrl }, projectIndex) => {
               return (
                 <ImageSlider
                   key={projectIndex}
                   src={src}
                   name={name}
                   file={file}
+                  demoUrl={demoUrl}
+                  repoUrl={repoUrl}
                 />
               );
             })}
