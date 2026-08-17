@@ -22,18 +22,16 @@ export default function About() {
               Information about me
             </h4>
             <p className="p-4 leading-8 text-grey-1">
-              Frontend Developer with 5+ years building performant React and
-              Angular applications for B2B SaaS products, including full
-              mobile app delivery in React Native. I'm currently expanding
-              into backend development with Node.js/NestJS, and I'm known for
-              turning complex, hand-rolled UI into scalable, declarative
-              systems.
+              I've been building React and Angular apps for 5+ years, mostly
+              for B2B SaaS companies, and I've shipped a full mobile app in
+              React Native too. Right now I'm picking up backend work with
+              Node.js and NestJS so I can own more of a project end to end.
               <br />
               <br />
-              Beyond writing code, I care about what the team can build on
-              after I'm done&mdash;documenting migrations in markdown guides,
-              running internal sessions on patterns I've shipped, and leaving
-              systems easier to extend than I found them.
+              When I finish a piece of work, I don't just hand it off. I
+              write the docs, walk the team through it, and make sure
+              whoever touches it next isn't stuck reverse-engineering what I
+              did.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8">
@@ -59,7 +57,7 @@ export default function About() {
           <h4 className="underline-center relative py-14 text-center text-2xl font-semibold tracking-[-0.01em] md:text-[1.7rem]">
             My Skills
           </h4>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="flex flex-col gap-8">
             {skilldata.map(({ category, skills }) => (
               <Skill key={category} category={category} skills={skills} />
             ))}

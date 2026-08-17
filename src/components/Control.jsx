@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import controlData from "../data/controlData";
 
-function Control({ activeIndex, setActiveIndex, setIsLight }) {
+function Control({ activeIndex, setActiveIndex, isLight, setIsLight }) {
   const trackRef = useRef(null);
   const itemRefs = useRef([]);
   const [indicator, setIndicator] = useState({ left: 0, width: 0 });
@@ -37,7 +37,7 @@ function Control({ activeIndex, setActiveIndex, setIsLight }) {
       <nav className="fixed left-1/2 top-4 z-10 -translate-x-1/2 md:top-6">
         <div
           ref={trackRef}
-          className="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/35 p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-[20px] backdrop-saturate-[180%]"
+          className="relative flex items-center gap-1 rounded-full border border-[var(--nav-glass-border)] bg-[var(--nav-glass-bg)] p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-[20px] backdrop-saturate-[180%] transition-colors duration-300"
         >
           <div
             className="absolute left-0 top-1.5 z-0 h-[calc(100%-12px)] rounded-full bg-secondary transition-[transform,width] duration-500 ease-[cubic-bezier(0.34,1.25,0.64,1)]"
@@ -64,12 +64,21 @@ function Control({ activeIndex, setActiveIndex, setIsLight }) {
           ))}
         </div>
       </nav>
-      <div
+      <button
+        type="button"
         onClick={handleTheme}
-        className="fixed right-[2.6%] top-[5%] flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full bg-grey-4 shadow-[0_3px_15px_rgba(0,0,0,0.3)] transition-transform duration-100 hover:scale-95 active:-translate-y-[3px] md:h-[70px] md:w-[70px]"
+        aria-label="Toggle light/dark theme"
+        aria-pressed={isLight}
+        className={`fixed right-[2.6%] top-[5%] z-10 h-8 w-14 rounded-full p-1 shadow-[0_3px_15px_rgba(0,0,0,0.3)] transition-colors duration-300 ${
+          isLight ? "bg-secondary" : "bg-grey-4"
+        }`}
       >
-        <i className="fas fa-adjust text-xl text-grey-2 pointer-events-none"></i>
-      </div>
+        <span
+          className={`block h-6 w-6 rounded-full bg-white shadow-md transition-transform duration-300 ${
+            isLight ? "translate-x-6" : "translate-x-0"
+          }`}
+        />
+      </button>
     </>
   );
 }

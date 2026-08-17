@@ -12,7 +12,7 @@ export default function Header() {
       <div className="mx-auto grid min-h-screen max-w-[1400px] grid-cols-1 items-center gap-10 px-6 md:grid-cols-2 md:px-16">
         <div className="relative order-2 flex items-center justify-center md:order-1">
           <div className="absolute left-[10%] top-[20%] h-3/5 w-3/5 -z-10 rounded-full bg-[radial-gradient(circle,var(--color-secondary)_0%,transparent_70%)] opacity-[0.35] blur-[70px]" />
-          <div className="h-[70vw] max-h-[420px] w-[90%] overflow-hidden rounded-[18px] bg-black md:ml-16 md:h-[90%] md:w-[68%]">
+          <div className="aspect-[3/4] w-[90%] max-w-[420px] overflow-hidden rounded-[18px] bg-black md:ml-16 md:w-[68%] md:max-w-none">
             <img
               src={profileImage}
               alt="Rishav Saha"
@@ -29,10 +29,11 @@ export default function Header() {
             React &amp; Angular applications that scale.
           </h1>
           <p className="my-6 max-w-[40rem] leading-[1.9rem] text-grey-1">
-            5+ years shipping performant frontends for B2B SaaS
-            products&mdash;from a multi-tenant Angular platform used across
-            Italy to a React Native app built from scratch. I turn complex,
-            hand-rolled UI into systems other engineers can actually build on.
+            I've spent the last 5+ years building React and Angular apps for
+            B2B SaaS companies. That includes a travel platform used across
+            Italy and a React Native app I built from scratch at OnlyGood.
+            I like taking messy, hand-rolled UI and turning it into something
+            the rest of the team can actually work with.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a

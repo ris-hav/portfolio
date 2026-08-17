@@ -1,7 +1,5 @@
 import contactData from "../data/contactData";
 import socialMediaData from "../data/socialMediaData";
-import cv from "../asset/Rishav_Saha_Frontend_Developer.pdf";
-import { FaDownload } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -19,10 +17,9 @@ export default function Contact() {
           <div className="md:flex-[2]">
             <h4 className="mt-4 text-3xl uppercase">Let's talk</h4>
             <p className="my-4 leading-[1.8rem]">
-              I'm open to senior frontend and full-stack roles where I can
-              own real architectural decisions, not just implement someone
-              else's spec. If that's what you're hiring for, reach out
-              directly or send a message below.
+              Looking for a senior frontend or full-stack role where I
+              actually get to make the architectural calls. If that's what
+              you're hiring for, email me directly or use the form below.
             </p>
             <div className="space-y-2">
               {contactData.map(({ icon, title, value }, contactIndex) => (
@@ -53,19 +50,6 @@ export default function Contact() {
                   />
                 </a>
               ))}
-            </div>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href={cv}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-3.5 font-medium text-white transition hover:opacity-85"
-              >
-                <span className="text-base">Download Resume</span>
-                <span className="flex items-center justify-center text-sm">
-                  <FaDownload />
-                </span>
-              </a>
             </div>
           </div>
           <div className="mt-10 md:ml-12 md:mt-0 md:flex-[3]">

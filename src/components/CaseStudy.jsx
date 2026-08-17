@@ -13,9 +13,9 @@ export default function CaseStudy({
 }) {
   return (
     <article className="rounded-[22px] bg-grey-4 p-10 transition hover:-translate-y-0.5">
-      <div className="mb-3 flex items-center justify-between text-[0.85rem] uppercase tracking-wide text-secondary">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 text-[0.85rem] uppercase tracking-wide text-secondary">
         <span>{company}</span>
-        <span>{period}</span>
+        <span className="shrink-0">{period}</span>
       </div>
       <h3 className="mb-1 text-2xl md:text-[1.6rem]">{title}</h3>
       <p className="mb-5 text-[0.95rem] font-medium text-grey-2">{role}</p>

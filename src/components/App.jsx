@@ -13,6 +13,10 @@ export default function App() {
     return () => document.body.classList.remove("light-mode");
   }, [isLight]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeIndex]);
+
   function currentSection() {
     switch (activeIndex) {
       case 0:
@@ -34,6 +38,7 @@ export default function App() {
       <Control
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
+        isLight={isLight}
         setIsLight={setIsLight}
       />
     </div>

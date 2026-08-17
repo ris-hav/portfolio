@@ -1,14 +1,14 @@
 export default function Skill({ category, skills }) {
   return (
     <div>
-      <p className="mb-[0.9rem] text-[0.95rem] font-semibold uppercase tracking-wide text-grey-2">
+      <p className="mb-4 text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-grey-2">
         {category}
       </p>
-      <div className="flex flex-wrap gap-[0.7rem]">
+      <div className="flex flex-wrap gap-2.5">
         {skills.map((skill) => (
           <span
             key={skill}
-            className="inline-block rounded-[20px] border border-grey-4 bg-grey-6 px-[1.1rem] py-2 text-sm transition hover:border-secondary hover:text-secondary"
+            className="inline-block rounded-full bg-grey-4 px-4 py-2 text-sm font-medium text-ink transition-colors duration-200 hover:bg-secondary hover:text-white"
           >
             {skill}
           </span>

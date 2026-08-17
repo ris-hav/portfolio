@@ -1,15 +1,15 @@
 const caseStudies = [
   {
-    company: "OnlyGood",
+    company: "Onlygood Futuretech Private Limited",
     role: "Senior Frontend Developer",
     period: "Aug 2025 – Present",
     title: "Cutting Angular form boilerplate by 95%",
     problem:
-      "Angular Reactive Forms were one of the most painful parts of the codebase to work in, and state was scattered across modules, causing redundant backend calls and drift.",
+      "The Angular forms in this codebase were a mess to work in, and state was scattered across modules, so screens kept re-fetching data they already had.",
     bullets: [
-      "Rebuilt forms with Reactive Forms and FormBuilder, then documented the migration in markdown guides and ran internal sessions so every developer had a production-ready pattern.",
-      "Redesigned cross-module state with a lightweight shared-service pattern, keeping data in sync across navigation without redundant fetches.",
-      "Also shipped the OnlyGood mobile app from scratch in React Native with role-based auth, and ECharts dashboards with locale-aware PDF/CSV export.",
+      "Rebuilt the forms on Reactive Forms and FormBuilder, wrote up the migration in markdown guides, and ran sessions with the team so everyone had a pattern they could actually reuse.",
+      "Redesigned state across modules with a shared-service pattern so data stayed in sync without re-fetching on every navigation.",
+      "Built the OnlyGood mobile app from scratch in React Native, with role-based auth for operators and CXOs, plus ECharts dashboards that export to locale-aware PDF and CSV.",
     ],
     impact: [
       { value: "95%", label: "less form boilerplate" },
@@ -23,11 +23,11 @@ const caseStudies = [
     period: "Jul 2024 – Jun 2025",
     title: "Building Menu Management for a B2B travel platform",
     problem:
-      "A B2B travel platform serving the Italian market needed an entire Menu Management system built from the ground up, under sprint deadlines that couldn't slip.",
+      "This B2B travel platform for the Italian market needed a Menu Management system built from nothing, on sprint deadlines that weren't moving.",
     bullets: [
-      "Owned the full Menu Management system end to end, integrating APIs with Axios and handling complex business workflows.",
-      "Cut page load times by half using React Query for caching, lazy loading, memoization, and virtualization.",
-      "Led the frontend team to consistently hit sprint targets and delivery deadlines.",
+      "Owned the Menu Management system end to end, from the API integration work with Axios through the business logic.",
+      "Cut page load times in half with React Query for caching, plus lazy loading, memoization, and virtualization where they actually mattered.",
+      "Led the frontend team, and we hit our sprint targets every cycle.",
     ],
     impact: [{ value: "50%", label: "faster page loads" }],
     tech: ["React", "React Query", "Axios", "Performance Optimization"],
@@ -36,13 +36,13 @@ const caseStudies = [
     company: "Personal Project",
     role: "Full-Stack Architecture",
     period: "2025",
-    title: "AccessSuite — multi-tenant RBAC from scratch",
+    title: "AccessSuite: multi-tenant RBAC from scratch",
     problem:
-      "Wanted to prove out backend architecture skills beyond the frontend: a real multi-tenant access-control system with proper isolation, not a CRUD toy.",
+      "Wanted to prove I could design backend architecture, not just consume an API someone else built. So I built a real multi-tenant access-control system, not another CRUD demo.",
     bullets: [
-      "Architected tenant isolation via request-level guards, so one client's data is structurally unreachable from another's requests.",
-      "Implemented JWT auth with refresh rotation and per-client role-based access control.",
-      "Built the full stack solo: NestJS API, Prisma ORM, PostgreSQL.",
+      "Built tenant isolation with request-level guards, so one client's data is structurally unreachable from another's requests.",
+      "Set up JWT auth with refresh rotation and role-based access control scoped per client.",
+      "Built the whole stack myself: NestJS API, Prisma ORM, PostgreSQL.",
     ],
     impact: [],
     tech: ["NestJS", "Prisma", "PostgreSQL", "JWT", "RBAC"],
