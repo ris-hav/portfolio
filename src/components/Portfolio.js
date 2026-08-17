@@ -11,9 +11,6 @@ export default function Portfolio() {
   const imageTrackRef = useRef(null);
   const percentageRef = useRef(0);
 
-  console.log("imageTrackRef", imageTrackRef);
-  console.log("percentageRef", percentageRef);
-
   const handleWheel = (event) => {
     // event.preventDefault();
     const maxDelta = window.innerWidth / 2; //the distance of total width that needs to be scrolled, if it's /15 then we need to scroll very less to reach the 15% of the entire width

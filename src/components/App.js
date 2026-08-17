@@ -1,10 +1,4 @@
-import { useState, lazy, Suspense, useEffect } from "react";
-// const Header = lazy(() => import("./Header"));
-// const About = lazy(() => import("./About"));
-// const Portfolio = lazy(() => import("./Portfolio"));
-// const Contact = lazy(() => import("./Contact"));
-// const Control = lazy(() => import("./Control"));
-
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import About from "./About";
 import Portfolio from "./Portfolio";
@@ -35,18 +29,13 @@ export default function App() {
   }
 
   return (
-    <>
-      {/* <div className={`main-content ${isLight ? "light-mode" : ""}`}> */}
-      <div className={`main-content`}>
-        {/* <Suspense fallback={<div>Loading…</div>}> */}
-        {currentSection()}
-        <Control
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-          setIsLight={setIsLight}
-        />
-        {/* </Suspense> */}
-      </div>
-    </>
+    <div className="main-content">
+      {currentSection()}
+      <Control
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        setIsLight={setIsLight}
+      />
+    </div>
   );
 }
