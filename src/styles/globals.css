@@ -76,14 +76,16 @@ a {
     transform: translateX(-50%);
   }
 
-  .stat-label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 15px;
-    width: 2rem;
-    height: 2px;
-    background-color: var(--color-grey-5);
+  @media (min-width: 768px) {
+    .stat-label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 2rem;
+      height: 2px;
+      background-color: var(--color-grey-5);
+    }
   }
 
   .bullet-dot::before {

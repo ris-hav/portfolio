@@ -34,17 +34,17 @@ export default function About() {
               did.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-4 md:gap-8">
             {aboutQuantifiable.map((about, AboutIndex) => (
               <div
                 key={AboutIndex}
                 className="cursor-default rounded-[20px] bg-grey-4 transition hover:-translate-y-1"
               >
-                <div className="flex flex-col p-6">
-                  <p className="text-5xl font-bold text-secondary">
+                <div className="flex flex-col p-4 md:p-6">
+                  <p className="text-3xl font-bold text-secondary md:text-5xl">
                     {about.quantity}
                   </p>
-                  <p className="stat-label relative pl-12 text-xl uppercase tracking-[2px] text-grey-1">
+                  <p className="stat-label relative text-xs uppercase tracking-[1px] text-grey-1 md:pl-12 md:text-xl md:tracking-[2px]">
                     {about.title}
                   </p>
                 </div>
