@@ -74,6 +74,7 @@ export default function Portfolio() {
           ))}
         </div>
 
+        {/* Side Projects section — temporarily disabled, keep for later
         <h4 className="underline-center relative py-14 text-center text-2xl font-semibold tracking-[-0.01em] md:text-[1.7rem]">
           Side Projects
         </h4>
@@ -117,6 +118,7 @@ export default function Portfolio() {
             </div>
           </div>
         )}
+        */}
       </div>
     </section>
   );
