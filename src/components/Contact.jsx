@@ -9,7 +9,7 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-[1400px] px-6 pb-28 pt-10 md:pb-16 md:pt-28 md:px-16">
         <div className="text-center">
-          <h2 className="relative z-10 text-3xl font-semibold tracking-[-0.02em] md:text-[3.2rem]">
+          <h2 className="relative z-10 text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[3.2rem]">
             Contact <span className="text-secondary">me</span>
           </h2>
         </div>
