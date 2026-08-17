@@ -7,10 +7,10 @@ export default function Header() {
   return (
     <header
       id="home"
-      className="w-full overflow-hidden bg-primary text-ink transition-colors duration-300 animate-fadeUp md:min-h-screen"
+      className="w-full overflow-hidden bg-primary text-ink transition-colors duration-300 md:min-h-screen"
     >
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 px-6 pb-28 pt-10 md:min-h-screen md:grid-cols-2 md:items-center md:gap-10 md:px-16 md:pb-0 md:pt-0">
-        <div className="relative order-2 flex items-center justify-center md:order-1">
+        <div className="animate-fadeUp relative order-2 flex items-center justify-center [animation-delay:120ms] md:order-1">
           <div className="absolute left-[10%] top-[20%] h-3/5 w-3/5 -z-10 rounded-full bg-[radial-gradient(circle,var(--color-secondary)_0%,transparent_70%)] opacity-[0.35] blur-[70px]" />
           <div className="aspect-[3/4] w-[90%] max-w-[420px] overflow-hidden rounded-[18px] bg-black md:ml-16 md:w-[68%] md:max-w-none">
             <img
@@ -21,21 +21,21 @@ export default function Header() {
           </div>
         </div>
         <div className="order-1 mx-auto w-[90%] md:order-2 md:mx-0 md:w-auto md:pr-12">
-          <p className="m-0 max-w-[calc(100%-64px)] text-sm font-semibold uppercase tracking-[3px] text-secondary md:max-w-none">
+          <p className="animate-fadeUp m-0 max-w-[calc(100%-64px)] text-sm font-semibold uppercase tracking-[3px] text-secondary md:max-w-none">
             Senior Frontend Developer
           </p>
-          <h1 className="mt-4 text-3xl font-semibold leading-[1.35] tracking-normal sm:text-4xl md:text-[2.75rem] md:leading-[1.25] md:tracking-[-0.01em]">
+          <h1 className="animate-fadeUp mt-4 text-3xl font-semibold leading-[1.35] tracking-normal [animation-delay:80ms] sm:text-4xl md:text-[2.75rem] md:leading-[1.25] md:tracking-[-0.01em]">
             Hi, I'm <span className="text-secondary">Rishav</span>. I build
             React &amp; Angular applications that scale.
           </h1>
-          <p className="my-6 max-w-[40rem] leading-[1.9rem] text-grey-1">
+          <p className="animate-fadeUp my-6 max-w-[40rem] leading-[1.9rem] text-grey-1 [animation-delay:160ms]">
             I've spent the last 5+ years building React and Angular apps for
             B2B SaaS companies. That includes a travel platform used across
             Italy and a React Native app I built from scratch at OnlyGood.
             I like taking messy, hand-rolled UI and turning it into something
             the rest of the team can actually work with.
           </p>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="animate-fadeUp flex flex-wrap items-center gap-4 [animation-delay:240ms]">
             <a
               href={cv}
               target="_blank"

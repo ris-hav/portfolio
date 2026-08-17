@@ -2,6 +2,7 @@ import skilldata from "../data/skilldata";
 import aboutQuantifiable from "../data/aboutQuantifiable";
 import timelineData from "../data/timelineData";
 import Skill from "./Skill";
+import Reveal from "./Reveal";
 
 export default function About() {
   return (
@@ -36,19 +37,18 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 gap-4 md:gap-8">
             {aboutQuantifiable.map((about, AboutIndex) => (
-              <div
-                key={AboutIndex}
-                className="cursor-default rounded-[20px] bg-grey-4 transition hover:-translate-y-1"
-              >
-                <div className="flex flex-col p-4 md:p-6">
-                  <p className="text-3xl font-bold text-secondary md:text-5xl">
-                    {about.quantity}
-                  </p>
-                  <p className="stat-label relative text-xs uppercase tracking-[1px] text-grey-1 md:pl-12 md:text-xl md:tracking-[2px]">
-                    {about.title}
-                  </p>
+              <Reveal key={AboutIndex} delay={AboutIndex * 80}>
+                <div className="cursor-default rounded-[20px] bg-grey-4 transition hover:-translate-y-1">
+                  <div className="flex flex-col p-4 md:p-6">
+                    <p className="text-3xl font-bold text-secondary md:text-5xl">
+                      {about.quantity}
+                    </p>
+                    <p className="stat-label relative text-xs uppercase tracking-[1px] text-grey-1 md:pl-12 md:text-xl md:tracking-[2px]">
+                      {about.title}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -58,8 +58,10 @@ export default function About() {
             My Skills
           </h4>
           <div className="flex flex-col gap-8">
-            {skilldata.map(({ category, skills }) => (
-              <Skill key={category} category={category} skills={skills} />
+            {skilldata.map(({ category, skills }, skillIndex) => (
+              <Reveal key={category} delay={skillIndex * 70}>
+                <Skill category={category} skills={skills} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -69,24 +71,23 @@ export default function About() {
         </h4>
         <div className="grid grid-cols-1 gap-8 pb-12 md:grid-cols-2">
           {timelineData.map((timeline, timelineIndex) => (
-            <div
-              key={timelineIndex}
-              className="relative border-l border-grey-5 pl-12"
-            >
-              <div className="absolute -left-[26px] top-0 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-secondary">
-                <i className="fa-solid fa-briefcase text-xl"></i>
+            <Reveal key={timelineIndex} delay={(timelineIndex % 2) * 100}>
+              <div className="relative border-l border-grey-5 pl-12">
+                <div className="absolute -left-[26px] top-0 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-secondary">
+                  <i className="fa-solid fa-briefcase text-xl"></i>
+                </div>
+                <p className="inline-block rounded-[15px] bg-grey-5 px-[0.6rem] py-[0.2rem] text-xs font-medium uppercase">
+                  {timeline.duration}
+                </p>
+                <h5 className="py-4 text-xl font-semibold uppercase">
+                  {timeline.role}{" "}
+                  <span className="text-lg font-medium text-grey-2">
+                    {` - ${timeline.company}`}
+                  </span>
+                </h5>
+                <p className="text-grey-2">{timeline.responsibilities}</p>
               </div>
-              <p className="inline-block rounded-[15px] bg-grey-5 px-[0.6rem] py-[0.2rem] text-xs font-medium uppercase">
-                {timeline.duration}
-              </p>
-              <h5 className="py-4 text-xl font-semibold uppercase">
-                {timeline.role}{" "}
-                <span className="text-lg font-medium text-grey-2">
-                  {` - ${timeline.company}`}
-                </span>
-              </h5>
-              <p className="text-grey-2">{timeline.responsibilities}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

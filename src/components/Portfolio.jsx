@@ -3,6 +3,7 @@ import projects from "../data/projects";
 import caseStudies from "../data/caseStudies";
 import ImageSlider from "./ImageSlider";
 import CaseStudy from "./CaseStudy";
+import Reveal from "./Reveal";
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
@@ -70,7 +71,9 @@ export default function Portfolio() {
         </p>
         <div className="mt-4 flex flex-col gap-10">
           {caseStudies.map((caseStudy) => (
-            <CaseStudy key={caseStudy.title} {...caseStudy} />
+            <Reveal key={caseStudy.title}>
+              <CaseStudy {...caseStudy} />
+            </Reveal>
           ))}
         </div>
 

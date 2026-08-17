@@ -10,6 +10,7 @@ export default function App() {
     () => window.matchMedia("(prefers-color-scheme: light)").matches
   );
   const [activeIndex, setActiveIndex] = useState(0);
+
   useEffect(() => {
     if (isLight) document.body.classList.toggle("light-mode");
     return () => document.body.classList.remove("light-mode");

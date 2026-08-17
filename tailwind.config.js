@@ -40,7 +40,7 @@ module.exports = {
         },
       },
       animation: {
-        fadeUp: "fadeUp 0.6s cubic-bezier(0.28, 0.11, 0.32, 1)",
+        fadeUp: "fadeUp 0.6s cubic-bezier(0.28, 0.11, 0.32, 1) backwards",
       },
       transitionTimingFunction: {
         apple: "cubic-bezier(0.28, 0.11, 0.32, 1)",
