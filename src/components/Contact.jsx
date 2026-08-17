@@ -1,123 +1,132 @@
-// import React from "react";
 import contactData from "../data/contactData";
 import socialMediaData from "../data/socialMediaData";
 import cv from "../asset/Rishav_Saha_Frontend_Developer.pdf";
 import { FaDownload } from "react-icons/fa";
+
 export default function Contact() {
   return (
-    <>
-      <section className="section sec5 contact active" id="contact">
-        <div className="contact-container">
-          <div className="main-title">
-            <h2>
-              Contact <span>me</span>
-              {/* <span className="bg-text">Approach</span> */}
-            </h2>
-          </div>
-          <div className="contact-content-con">
-            <div className="left-contact">
-              <h4>Let's talk</h4>
-              <p>
-                I'm open to senior frontend and full-stack roles where I can
-                own real architectural decisions, not just implement someone
-                else's spec. If that's what you're hiring for, reach out
-                directly or send a message below.
-              </p>
-              <div className="contact-info">
-                {contactData.map(({ icon, title, value }, contactIndex) => (
-                  <div key={contactIndex} className="contact-item">
-                    <div className="icon">
-                      <i className={icon}></i>
-                      {title}
-                    </div>
-                    <p>{`: ${value}`}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="contact-icons">
-                <div className="contact-icon">
-                  {socialMediaData.map(({ title, icon, link }, socialIndex) => (
-                    <a
-                      key={socialIndex}
-                      title={title}
-                      href={link}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i className={icon} />
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <div className="btn-con">
-                <a
-                  href={cv}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="main-btn"
+    <section
+      id="contact"
+      className="min-h-screen w-full bg-primary text-ink transition-colors duration-300 animate-fadeUp"
+    >
+      <div className="mx-auto max-w-[1400px] px-6 pb-16 pt-28 md:px-16">
+        <div className="text-center">
+          <h2 className="relative z-10 text-3xl font-semibold tracking-[-0.02em] md:text-[3.2rem]">
+            Contact <span className="text-secondary">me</span>
+          </h2>
+        </div>
+        <div className="flex flex-col pt-10 md:flex-row">
+          <div className="md:flex-[2]">
+            <h4 className="mt-4 text-3xl uppercase">Let's talk</h4>
+            <p className="my-4 leading-[1.8rem]">
+              I'm open to senior frontend and full-stack roles where I can
+              own real architectural decisions, not just implement someone
+              else's spec. If that's what you're hiring for, reach out
+              directly or send a message below.
+            </p>
+            <div className="space-y-2">
+              {contactData.map(({ icon, title, value }, contactIndex) => (
+                <div
+                  key={contactIndex}
+                  className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between"
                 >
-                  <span className="btn-text">Download Resume</span>
-                  <span className="btn-icon">
-                    <FaDownload />
-                  </span>
+                  <div className="grid grid-cols-[40px_1fr] items-center">
+                    <i className={`${icon} flex items-center text-xl`}></i>
+                    {title}
+                  </div>
+                  <p className="my-[0.3rem]">{`: ${value}`}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 flex">
+              {socialMediaData.map(({ title, icon, link }, socialIndex) => (
+                <a
+                  key={socialIndex}
+                  title={title}
+                  href={link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="social-icon group mx-[0.4rem] flex h-[60px] w-[60px] items-center justify-center rounded-full border-2 border-grey-5 bg-grey-5 text-ink transition-all duration-300"
+                >
+                  <i
+                    className={`${icon} relative z-[3] text-xl transition-transform duration-500 group-hover:rotate-[360deg] group-hover:text-primary`}
+                  />
                 </a>
-              </div>
+              ))}
             </div>
-            <div className="right-contact">
-              <form
-                action="https://formsubmit.co/48a1e0c3a1922a7a7675febec7ace312"
-                method="POST"
-                className="contact-form"
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href={cv}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-3.5 font-medium text-white transition hover:opacity-85"
               >
-                <div className="input-control i-c-2">
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="YOUR NAME"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="YOUR EMAIL"
-                  />
-                </div>
-                <div className="input-control">
-                  <input
-                    type="text"
-                    name="subject"
-                    required
-                    placeholder="ENTER SUBJECT"
-                  />
-                  <input
-                    type="hidden"
-                    name="_next"
-                    value="https://ris-hav.github.io/thankyou/"
-                  />
-                </div>
-                <div className="input-control">
-                  <textarea
-                    name="message"
-                    id=""
-                    cols="15"
-                    rows="8"
-                    placeholder="Message here...."
-                  ></textarea>
-                </div>
-                <div className="btn-con">
-                  <button type="submit" className="main-btn">
-                    <span className="btn-text">Submit</span>
-                    <span className="btn-icon">
-                      <i className="fa-solid fa-paper-plane"></i>
-                    </span>
-                  </button>
-                </div>
-              </form>
+                <span className="text-base">Download Resume</span>
+                <span className="flex items-center justify-center text-sm">
+                  <FaDownload />
+                </span>
+              </a>
             </div>
+          </div>
+          <div className="mt-10 md:ml-12 md:mt-0 md:flex-[3]">
+            <form
+              action="https://formsubmit.co/48a1e0c3a1922a7a7675febec7ace312"
+              method="POST"
+            >
+              <div className="my-6 flex flex-col gap-6 sm:flex-row">
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="YOUR NAME"
+                  className="w-full rounded-[14px] border border-transparent bg-grey-4 px-[1.2rem] py-[0.9rem] text-ink outline-none transition focus:border-secondary"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="YOUR EMAIL"
+                  className="w-full rounded-[14px] border border-transparent bg-grey-4 px-[1.2rem] py-[0.9rem] text-ink outline-none transition focus:border-secondary"
+                />
+              </div>
+              <div className="my-6">
+                <input
+                  type="text"
+                  name="subject"
+                  required
+                  placeholder="ENTER SUBJECT"
+                  className="w-full rounded-[14px] border border-transparent bg-grey-4 px-[1.2rem] py-[0.9rem] text-ink outline-none transition focus:border-secondary"
+                />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://ris-hav.github.io/thankyou/"
+                />
+              </div>
+              <div className="my-6">
+                <textarea
+                  name="message"
+                  cols="15"
+                  rows="8"
+                  placeholder="Message here...."
+                  className="w-full resize-none rounded-[14px] border border-transparent bg-grey-4 px-[1.2rem] py-[0.9rem] text-ink outline-none transition focus:border-secondary"
+                ></textarea>
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-3.5 font-medium text-white transition hover:opacity-85"
+                >
+                  <span className="text-base">Submit</span>
+                  <span className="flex items-center justify-center text-sm">
+                    <i className="fa-solid fa-paper-plane"></i>
+                  </span>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

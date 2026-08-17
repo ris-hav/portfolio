@@ -55,25 +55,30 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <>
-      <section className="section sec3 portfolio active" id="portfolio">
-        <div className="main-title">
-          <h2>
-            Selected <span>work</span>
+    <section
+      id="portfolio"
+      className="min-h-screen w-full bg-primary text-ink transition-colors duration-300 animate-fadeUp"
+    >
+      <div className="mx-auto max-w-[1400px] px-6 pb-16 pt-28 md:px-16">
+        <div className="text-center">
+          <h2 className="relative z-10 text-3xl font-semibold tracking-[-0.02em] md:text-[3.2rem]">
+            Selected <span className="text-secondary">work</span>
           </h2>
         </div>
-        <p className="port-text">
+        <p className="py-8 text-center">
           A few of the systems I've built and the impact they had.
         </p>
-        <div className="case-studies">
+        <div className="mt-4 flex flex-col gap-10">
           {caseStudies.map((caseStudy) => (
             <CaseStudy key={caseStudy.title} {...caseStudy} />
           ))}
         </div>
 
-        <h4 className="stat-title">Side Projects</h4>
+        <h4 className="underline-center relative py-14 text-center text-2xl font-semibold tracking-[-0.01em] md:text-[1.7rem]">
+          Side Projects
+        </h4>
         {isMobile ? (
-          <div className="portfolios">
+          <div className="grid grid-cols-1 gap-8 pb-24">
             {projects.map(({ src, file, name, demoUrl, repoUrl }, projectIndex) => {
               return (
                 <ImageSlider
@@ -90,11 +95,13 @@ export default function Portfolio() {
         ) : (
           <div
             ref={trackRef}
-            id="po"
-            data-prev-percentage="0"
+            className="relative mx-auto mb-16 mt-8 h-[56vmin] w-[80vw] overflow-x-hidden"
             onWheel={handleWheel}
           >
-            <div ref={imageTrackRef} id="image-track">
+            <div
+              ref={imageTrackRef}
+              className="absolute left-[8%] top-[3vmin] flex gap-[4vmin]"
+            >
               {projects.map(({ src, file, name, demoUrl, repoUrl }, projectIndex) => {
                 return (
                   <ImageSlider
@@ -110,7 +117,7 @@ export default function Portfolio() {
             </div>
           </div>
         )}
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
